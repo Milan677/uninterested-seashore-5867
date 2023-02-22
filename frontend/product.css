@@ -1,0 +1,122 @@
+*{
+    top:0;
+    left:0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'popins',sans-serif;
+}
+
+body{
+    width:100%;
+    height:auto
+}
+#header1{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    padding:6px 100px;
+    background-color: red;
+    background: url("https://th.bing.com/th/id/OIP.2T83pkPCj_b5VCC-hBeV6gHaEo?w=298&h=185&c=7&r=0&o=5&dpr=1.5&pid=1.7");
+    background-size: 100% 100%;
+    backdrop-filter:blur(50px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:1;
+}
+.nav a{
+    position: relative;
+    font-size: 20px;
+    color: aliceblue;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.nav a::after{
+    content: "";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:100%;
+    height:3px;
+    background-color: #FFFF00;
+    border-radius: 5px;
+    transform:scaleX(0);
+    transition: .5s;
+    
+}
+/* .nav a:hover{
+    color:#FF3131;
+    
+} */
+.nav a:hover::after{
+    transform: scaleX(1);
+    cursor: pointer;
+    color:#FFFF00;
+}
+
+/* logo */
+#logo{
+   text-decoration: none;
+   font-size: 30px; 
+   font-weight:900;
+   color:transparent;
+   -webkit-text-stroke: 1px #fff ;
+   background: url(image/back2.png);
+   -webkit-background-clip:text;
+   background-position: 0 0;
+   animation: back 20s linear infinite;
+}
+@keyframes back{
+    100%{
+        background-position:2000px 0
+    }
+   
+}
+#logo span{
+    font-size: 40px;
+    
+}
+
+/* search */
+.search-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    
+}
+.searchText{
+    width:2.3rem;
+    padding:12px;
+    border-radius:5rem;
+    border:none;
+    outline:none;
+    transition: all 0.2s linear;
+    /* padding-left: 50px; */
+}
+.searchText:focus{
+    outline: none;
+}
+.searchBtn{
+    text-decoration: none;
+    width:2rem;
+    height:2rem;
+    background-color: rgb(43, 35, 121);
+    border-radius: 50px;
+    position: absolute;
+    left:2px;
+    top:4px;
+    color:#fff;
+    right:1rem;
+    display: grid;
+    place-items: center;
+    
+}
+.search-box:hover>.searchText{
+    width:25rem;
+    padding:12px;
+    padding-left:50px
+}
