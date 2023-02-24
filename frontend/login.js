@@ -95,6 +95,9 @@ form2.addEventListener("submit", (e) => {
         localStorage.setItem("token", res.token)
         console.log(res)
         swal("Good job!", "Lognin succesful", "success");
+        setTimeout(() => {
+          window.open("product.html");
+        }, 1000)
       }else if(res.msg==="wrong credentials"){
         swal("Invalid !", "email & password did not match", "warning");
       }

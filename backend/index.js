@@ -2,6 +2,7 @@ const express=require("express")
 const { connection } = require("./db")
 const{userRouter}=require("./routes/user.router")
 const{furnitureRouter}=require("./routes/furniture.router")
+const{cartRouter}=require("./routes/cart.router")
 const{authenticate}=require("./middleware/authenticate")
 const cors=require("cors")
 
@@ -13,6 +14,7 @@ app.use(express.json())
 app.use("/user",userRouter)
 app.use(authenticate)
 app.use("/furniture",furnitureRouter)
+app.use("/cart",cartRouter)
 
 app.listen(4500,async()=>{
     try {

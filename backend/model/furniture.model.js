@@ -6,7 +6,7 @@ const furnitureSchema=mongoose.Schema({
    price:Number,
    description:String,
    rating:Number,
-   category:String,
+   catagory:String,
    type:String,
    verity:String
 })
