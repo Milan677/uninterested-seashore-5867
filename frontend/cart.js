@@ -142,7 +142,7 @@ function priceUpdate(data){
         return;
     }
      
-    let cartPrice=0;
+    var cartPrice=0;
    
     data.forEach((element)=>{
         let quantityElem = document.querySelector('#q').textContent;
@@ -160,52 +160,113 @@ function priceUpdate(data){
 
     let main1 = document.querySelector(".left");
   main1.addEventListener("click", (event) => {
-    // let card_quantity_text=document.querySelector("#q")
-     if (event.target.classList.contains("inc")) {  
-         var cardElement = event.target.closest(".card");
-         var card_quantity_text= cardElement.querySelector(".card .quantity h3")
-        card_quantity_text.innerText++ 
-     }
-
-  if(event.target.classList.contains("dec")){
-    const cardElement = event.target.closest(".card");
-    let card_quantity_text= cardElement.querySelector(".card .quantity h3")
-    if(card_quantity_text.innerText<2){
-        card_quantity_text.innerText=2
+             
+    let cardElement = event.target.closest(".card");
+    let card_quantity_text = cardElement.querySelector(".card .quantity h3");
+    let itemPrice = cardElement.querySelector(".card .content h2 span").innerText;
+    
+    let cartPrice = parseFloat(price.innerText);
+    let cartTotalPrice = parseFloat(total.innerText);
+    
+    if (event.target.classList.contains("inc")) {
+        card_quantity_text.innerText++;
+        cartPrice += parseFloat(itemPrice);
+        cartTotalPrice = Math.floor(cartPrice - ((cartPrice * 25) / 100));
+    } else if (event.target.classList.contains("dec")) {
+        if (card_quantity_text.innerText < 2) {
+            card_quantity_text.innerText=1
+            return
+            
+        }else{
+            card_quantity_text.innerText--;
+            cartPrice -= parseFloat(itemPrice);
+            cartTotalPrice = Math.floor(cartPrice - ((cartPrice * 25) / 100));
+        }
     }
-    card_quantity_text.innerText--
-  }
+    
+    price.innerText = Math.floor(cartPrice);
+    total.innerText =  Math.floor(cartTotalPrice)
+    
+
 });
-
-
-
-
-
-
 
 }
 
 
-//.......quantity increment and decrement.....
-// let main1 = document.querySelector(".left");
-// main1.addEventListener("click", (event) => {
-//     // let card_quantity_text=document.querySelector("#q")
-//   if (event.target.classList.contains("inc")) {
-   
-//     const cardElement = event.target.closest(".card");
-//     let card_quantity_text= cardElement.querySelector(".card .quantity h3")
 
-//     card_quantity_text.innerText++ 
-//   }
 
-//   if(event.target.classList.contains("dec")){
-//     const cardElement = event.target.closest(".card");
-//     let card_quantity_text= cardElement.querySelector(".card .quantity h3")
-//     if(card_quantity_text.innerText<2){
-//         card_quantity_text.innerText=2
+
+// function priceUpdate(data){
+//     let price=document.querySelector("#Price")
+//     let quantity=document.querySelector("#quantity")
+//     let total=document.querySelector("#totalPrice")
+//     // let quantityElem = document.querySelector('#q').textContent;
+//     if (!Array.isArray(data)) {
+//         console.error("Data is not an array");
+//         return;
 //     }
-//     card_quantity_text.innerText--
-//   }
+     
+//     var cartPrice=0;
+   
+//     data.forEach((element)=>{
+//         let quantityElem = document.querySelector('#q').textContent;
+//          cartPrice=cartPrice+ (element.price*quantityElem)
+
+//     })
+
+//     quantity.innerHTML=data.length
+//     let num3=cartPrice
+//     var commas3 = num3.toString().split(".")[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+//     let num4= cartPrice-((cartPrice*25)/100)
+//     var commas4 = num4.toString().split(".")[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+//     price.innerText=commas3 
+//     console.log(price.innerText)
+//     total.innerText= commas4
+
+//     //....second part........
+
+//     let main1 = document.querySelector(".left");
+//   main1.addEventListener("click", (event) => {
+             
+//     let cardElement = event.target.closest(".card");
+//     let card_quantity_text = cardElement.querySelector(".card .quantity h3");
+//     let itemPrice = cardElement.querySelector(".card .content h2 span").innerText;
+    
+//     let cartPrice = parseFloat(price.innerText);
+//     let cartTotalPrice = parseFloat(total.innerText);
+    
+//     if (event.target.classList.contains("inc")) {
+//         card_quantity_text.innerText++;
+//         cartPrice += parseFloat(itemPrice);
+//         cartTotalPrice = Math.floor(cartPrice - ((cartPrice * 25) / 100));
+//     } else if (event.target.classList.contains("dec")) {
+//         if (card_quantity_text.innerText < 2) {
+//             card_quantity_text.innerText=1
+//             return
+            
+//         }else{
+//             card_quantity_text.innerText--;
+//             cartPrice -= parseFloat(itemPrice);
+//             cartTotalPrice = Math.floor(cartPrice - ((cartPrice * 25) / 100));
+//         }
+//     }
+
+ 
+   
+//     var num1=cartPrice;
+//     var commas = num1.toString().split(".")[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+   
+//     var num2=cartTotalPrice;
+//     var commas2 = num2.toString().split(".")[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    
+//     price.innerText = commas
+//     total.innerText =  commas2
+    
+
 // });
+
+// }
+
+// // var num = 1234567.89; var commas = num.toLocaleString ("en-US");
 
 

@@ -7,7 +7,8 @@
     font-family: 'popins', sans-serif;
 }
 body{
-    background-color: rgb(245, 235, 223);
+    /* background-color: rgb(245, 235, 223); */
+    background-color: #003366;
 }
 
 #container {
@@ -88,16 +89,18 @@ body{
 
 /* outer div */
 #outer{
+   
     width:100%;
     height:auto;
-    border:2px solid red;
+    /* border:2px solid red; */
     display: flex;
 }
 
 .left{
+    margin-top:90px;
     width:69%;
     height:auto;
-    border:2px solid blue;
+    /* border:2px solid blue; */
     display: grid;
     grid-template-columns: repeat(3,1fr);
 }
@@ -179,13 +182,17 @@ body{
 /* right side total price side */
 
 .right{
-    /* position: fixed; */
+    position:fixed;
+    left:880px;
+    top:80px;
     width:29%;
     height:350px;
-    border:2px solid rgb(26, 255, 0);
+    /* border:2px solid rgb(26, 255, 0); */
     display:flex;
     flex-direction: column;
-    margin-left:10px
+    margin-left:10px;
+    background-color: #fff;
+   
 }
 .heading{
     width:95%;

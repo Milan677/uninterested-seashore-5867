@@ -46,6 +46,4 @@ cartRouter.delete("/delete",async(req,res)=>{
         res.send({ "msg": "something went wrong", "error": error.message })
     }
 })
-
-
 module.exports = { cartRouter }
