@@ -1,6 +1,6 @@
 
 const showdata = () => {
-    fetch("http://localhost:4500/furniture", {
+    fetch("https://rich-teal-beetle-cape.cyclic.app/furniture", {
         headers: {
             "Content-type": "application/json",
             Authorization: localStorage.getItem("token"),
@@ -61,7 +61,7 @@ function displaydata(data) {
 
 //....fetching living room data........
 const living = () => {
-    fetch("http://localhost:4500/furniture/living", {
+    fetch("https://rich-teal-beetle-cape.cyclic.app/furniture/living", {
         headers: {
             "Content-type": "application/json",
             Authorization: localStorage.getItem("token"),
@@ -126,7 +126,7 @@ function displaylivingroomdata(data) {
 //..............fetching dining room furnitures   ............. 
 
 const dining = () => {
-    fetch("http://localhost:4500/furniture/dining", {
+    fetch("https://rich-teal-beetle-cape.cyclic.app/furniture/dining", {
         headers: {
             "Content-type": "application/json",
             Authorization: localStorage.getItem("token"),
@@ -191,7 +191,7 @@ function displaydiningdata(data) {
 
 //...........bed room furniture................
 const bedroom = () => {
-    fetch("http://localhost:4500/furniture/bed", {
+    fetch("https://rich-teal-beetle-cape.cyclic.app/furniture/bed", {
         headers: {
             "Content-type": "application/json",
             Authorization: localStorage.getItem("token"),
@@ -255,7 +255,7 @@ function displaybedroomdata(data) {
 
 //........fetching bathroom furniture........
 const bathroom = () => {
-    fetch("http://localhost:4500/furniture/bath", {
+    fetch("https://rich-teal-beetle-cape.cyclic.app/furniture/bath", {
         headers: {
             "Content-type": "application/json",
             Authorization: localStorage.getItem("token"),
@@ -337,7 +337,7 @@ const debounce = (fn, delay) => {
     let payload = {
       key: searchbox.value,
     };
-    let url = new URL("http://localhost:4500/furniture/search");
+    let url = new URL("https://rich-teal-beetle-cape.cyclic.app/furniture/search");
     url.search = new URLSearchParams(payload).toString();
     fetch(url, {
       headers: {
@@ -453,7 +453,7 @@ main.addEventListener("click", (event) => {
       quantity:"1"
     };
     
-    fetch("http://localhost:4500/cart/create",{
+    fetch("https://rich-teal-beetle-cape.cyclic.app/cart/create",{
       method:"POST",
       headers:{
         "Content-type":"application/json",
@@ -475,6 +475,90 @@ main.addEventListener("click", (event) => {
     
   }
 });
+
+
+//.................sort by price high to low..................
+const priceHigh=()=>{
+  fetch("https://rich-teal-beetle-cape.cyclic.app/furniture/price/high", {
+    headers: {
+        "Content-type": "application/json",
+        Authorization: localStorage.getItem("token"),
+    },
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      displayPriceHighToLow(res)
+        // console.log(res);
+    })
+    .catch((err) => console.log(err));
+}
+
+ function displayPriceHighToLow(data){
+  let main = document.getElementById("right");
+    main.innerHTML = null;
+
+    if (!Array.isArray(data)) {
+        console.error("Data is not an array");
+     
+    }
+
+    data.forEach((element) => {
+
+      main.innerHTML += `
+      <div class="card">
+        <div class="face front">
+          <div>
+            <img src="${element.image}" alt="">
+          </div><br>
+          <div>
+            <h4 style="color:rgb(210, 0, 0)">Sales Starts at INR <span>${element.price}</span></h4>
+          </div>
+        </div>
+        <div class="face back">
+          <div>
+            <img src="${element.image}" alt="">
+          </div>
+          <div>
+            <div>
+              <h3>Price: <span class="price">${element.price}</span></h3>
+              <h3>Flat 25% off</h3>
+            </div><br>
+            <h3>
+              <i style="color:orangered;" class="fa-solid fa-star"></i>
+              <i style="color:orangered;" class="fa-solid fa-star"></i>
+              <i style="color:orangered;" class="fa-solid fa-star"></i>
+              <i style="color:orangered;" class="fa-solid fa-star"></i>
+              <i style="color:orangered;" class="fa-solid fa-star-half-stroke"></i>
+              <span class="rating">${element.rating}</span>
+            </h3>
+            <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">${element.description}</p><br>
+            <button class="card-backside-btn">Add to cart <i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+      </div>
+    `;
+    });
+  }
+
+
+
+  //............s0rt by price low to high........
+  const priceLow=()=>{
+    fetch("https://rich-teal-beetle-cape.cyclic.app/furniture/price/low", {
+      headers: {
+          "Content-type": "application/json",
+          Authorization: localStorage.getItem("token"),
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        displayPriceHighToLow(res)
+          // console.log(res);
+      })
+      .catch((err) => console.log(err));
+  }
+  
+
 
 
 

@@ -54,9 +54,28 @@
     cursor: pointer;
     color:#FFFF00;
 }
-#logo img{
-    height:50px;
-    border:2px solid white
+#logo {
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  background: url(image/back2.png);
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+}
+
+@keyframes back {
+  100% {
+      background-position: 2000px 0
+  }
+
+}
+
+#logo span {
+  font-size: 40px;
+
 }
 
 .text-box{

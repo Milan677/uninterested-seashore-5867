@@ -5,6 +5,7 @@ const{furnitureRouter}=require("./routes/furniture.router")
 const{cartRouter}=require("./routes/cart.router")
 const{authenticate}=require("./middleware/authenticate")
 const cors=require("cors")
+require("dotenv").config()
 
 const app=express()
 app.use(cors({origin:"*"}))
@@ -16,7 +17,7 @@ app.use(authenticate)
 app.use("/furniture",furnitureRouter)
 app.use("/cart",cartRouter)
 
-app.listen(4500,async()=>{
+app.listen(process.env.port,async()=>{
     try {
         await connection
         console.log("connected to database.....")
@@ -24,5 +25,5 @@ app.listen(4500,async()=>{
         console.log(error)
     }
 
-    console.log("server running at port no 4500...")
+    console.log(`server running at port no ${process.env.port}...`)
 })

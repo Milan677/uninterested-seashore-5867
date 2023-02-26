@@ -176,7 +176,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
+   
 
 }
 
@@ -185,10 +185,34 @@
     margin-left: 10px;
     height: 450px;
     width: 25%;
-    border: 2px solid green;
+    /* border: 2px solid green; */
+    background-color: #fff;
     position: fixed;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background: #003366;
+}
+#left h1{
+    color:#fff
+}
+#left a{
+    margin-top: 20px;
+    padding:25px 0px;
+    display:inline-block;
+    text-decoration: none;
+    color:#fff
 
 }
+#left a:hover{
+   border-left:4px solid orangered;
+   background-color: orange;
+   color: #fff;
+}
+
+
+
+
 
 #right {
     background-color:rgb(224, 209, 209);

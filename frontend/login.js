@@ -36,7 +36,7 @@ form1.addEventListener("submit", (e) => {
     email: s_email.value,
     pass: s_pass.value
   }
-  fetch("http://localhost:4500/user/register", {
+  fetch("https://rich-teal-beetle-cape.cyclic.app/user/register", {
     method: "POST",
     headers: {
       "Content-type": "application/json"
@@ -83,7 +83,7 @@ form2.addEventListener("submit", (e) => {
     email: l_email.value,
     pass: l_pass.value
   }
-  fetch("http://localhost:4500/user/login", {
+  fetch("https://rich-teal-beetle-cape.cyclic.app/user/login", {
     method: "POST",
     headers: {
       "Content-type": "application/json"
@@ -96,7 +96,7 @@ form2.addEventListener("submit", (e) => {
         console.log(res)
         swal("Good job!", "Lognin succesful", "success");
         setTimeout(() => {
-          window.open("product.html");
+          window.open("home.html");
         }, 1000)
       }else if(res.msg==="wrong credentials"){
         swal("Invalid !", "email & password did not match", "warning");

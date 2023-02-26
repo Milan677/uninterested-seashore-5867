@@ -56,4 +56,32 @@ furnitureRouter.get("/search", async (req, res) => {
   });
 
 
+
+  //..........post new furniture...........
+  furnitureRouter.post("/create",async(req,res)=>{
+    const payload=req.body
+     try {
+       const furniture=await furnitureModel.insertMany(payload)
+       res.send({"msg":"products added into database"})
+     } catch (error) {
+      res.send({ "msg": "something went wrong", "error": error.message })
+     }
+  })
+
+  //.................sorting......................
+  
+  //.................. sorting by price high to low..............
+  furnitureRouter.get("/price/high",async(req,res)=>{
+    const furnitures= await furnitureModel.find().sort({"price":-1})
+    res.send(furnitures)
+})
+
+//.................sorting by price low to high..............
+furnitureRouter.get("/price/low",async(req,res)=>{
+  const furnitures= await furnitureModel.find().sort({"price":1})
+  res.send(furnitures)
+})
+
+
+
 module.exports={furnitureRouter}

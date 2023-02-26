@@ -46,7 +46,7 @@
     },
     {
         "image": "https://ak1.ostkcdn.com/images/products/is/images/direct/f0d9c7ceb30547b56a59d09e94fa32585ca0db92/Bobran-Modern-Velvet-3-Seater-Sofa-by-Christopher-Knight-Home.jpg?imwidth=480&impolicy=medium",
-        "price": "Sale Starts at INR 47887.28",
+        "price":  47887.28,
         "rating": 160,
         "description": "Bobran Modern Velvet 3-seat Sofa by Christopher Knight Home - 30.00\" D x 83.25\" W x 30.25\" H",
         "catagory": "Living room furniture",
@@ -55,7 +55,7 @@
     },
     {
         "image": "https://ak1.ostkcdn.com/images/products/is/images/direct/16883c1738b9dc9fe7ef24cdca00859a85404f61/Three-Seats-Without-Chaise-Concubine-Solid-Wood-Frame-Sofa.jpg?imwidth=480&impolicy=medium",
-        "price": "INR 40555.05",
+        "price": 40555.05,
         "rating": 13,
         "description": "Three Seats Without Chaise Concubine Solid Wood Frame Sofa",
         "catagory": "Living room furniture",
@@ -1650,7 +1650,7 @@
       },
       {
         "image": "https://ak1.ostkcdn.com/images/products/is/images/direct/d2cf833b89d4807cb0e1a16036eeb05bad12c1e9/6%27-x-2%27-x-2%22-Folding-Gymnastics-Gym-Exercise-Aerobics-Mat.jpg?imwidth=480&impolicy=medium",
-        "price": "INR 5336.68",
+        "price":  5336.68,
         "rating": 10,
         "description": "6' x 2' x 2\" Folding Gymnastics Gym Exercise Aerobics Mat",
         "catagory": "home gym furniture",
