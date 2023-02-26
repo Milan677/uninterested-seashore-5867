@@ -1,0 +1,339 @@
+* {
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'popins', sans-serif;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#header1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 6px 100px;
+    background: url("https://th.bing.com/th/id/OIP.2T83pkPCj_b5VCC-hBeV6gHaEo?w=298&h=185&c=7&r=0&o=5&dpr=1.5&pid=1.7");
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+    z-index:100
+}
+
+.nav a {
+    position: relative;
+    font-size: 20px;
+    color: aliceblue;
+    text-decoration: none;
+    margin-left: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: #FFFF00;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: .5s;
+
+}
+
+/* .nav a:hover{
+    color:#FF3131;
+    
+} */
+.nav a:hover::after {
+    transform: scaleX(1);
+    cursor: pointer;
+    color: #FFFF00;
+}
+
+/* logo */
+#logo {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(image/back2.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+
+@keyframes back {
+    100% {
+        background-position: 2000px 0
+    }
+
+}
+
+#logo span {
+    font-size: 40px;
+
+}
+
+/* search */
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.searchText {
+    width: 2.3rem;
+    padding: 12px;
+    border-radius: 5rem;
+    border: none;
+    outline: none;
+    transition: all 0.2s linear;
+    /* padding-left: 50px; */
+}
+
+.searchText:focus {
+    outline: none;
+}
+
+.searchBtn {
+    text-decoration: none;
+    width: 2rem;
+    height: 2rem;
+    background-color: rgb(43, 35, 121);
+    border-radius: 50px;
+    position: absolute;
+    left: 2px;
+    top: 4px;
+    color: #fff;
+    right: 1rem;
+    display: grid;
+    place-items: center;
+
+}
+
+.search-box:hover>.searchText {
+    width: 25rem;
+    padding: 12px;
+    padding-left: 50px
+}
+
+/* nav2 */
+.nav2 {
+    width: 100%;
+    height: 68px;
+    /* border: 2px solid red */
+}
+
+.nav3 {
+    position: fixed;
+    background-color: #fff;
+    margin-top: 70px;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    z-index:100;
+}
+
+.nav3 a {
+    display: inline-block;
+    color: black;
+    padding: 6px 20px;
+    text-decoration: none;
+    margin-left: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.nav3 a:hover {
+    border-bottom: 4px solid red;
+    border-radius: 30px;
+    background-color: rgb(244, 95, 95);
+    color: #fff
+}
+
+/* main div */
+#main {
+    margin-top: 110px;
+    height: auto;
+    width: 100%;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+
+}
+
+#left {
+    margin-top: 110px;
+    margin-left: 10px;
+    height: 450px;
+    width: 25%;
+    /* border: 2px solid green; */
+    background-color: #fff;
+    position: fixed;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background: #003366;
+}
+#left h1{
+    color:#fff
+}
+#left a{
+    margin-top: 20px;
+    padding:25px 0px;
+    display:inline-block;
+    text-decoration: none;
+    color:#fff
+
+}
+#left a:hover{
+   border-left:4px solid orangered;
+   background-color: orange;
+   color: #fff;
+}
+
+
+
+
+
+#right {
+    background-color:rgb(224, 209, 209);
+    margin-left: 350px;
+    height: 100%;
+    width: 80%;
+    /* border: 2px solid orangered; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px 10px;
+    /* grid-row-gap: 10px; */
+}
+
+/* grid card */
+.card {
+    position: relative;
+    height: 400px;
+    /* background-color: #FFFF00; */
+    transform-style: preserve-3d;
+    
+}
+
+.card .face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease-in-out;
+    backface-visibility: hidden;
+    transform: perspective(500px) rotateY(0deg);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   
+
+}
+
+.card .face.front {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+  
+}
+
+.card .face.front>div:nth-child(1) {
+    height: 85%;
+    width: 95%;
+
+}
+.card .face.front>div:nth-child(2) {
+   display:flex;
+   /* justify-content:start; */
+   align-items: center;
+}
+.card .face.front h4{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.card .face.front img {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px 20px;
+
+}
+
+.card:hover .face.front {
+    transform: perspective(500px) rotateY(180deg);
+}
+
+.card .face.back {
+    /* background-color: blue; */
+    transform: perspective(500px) rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(160, 243, 243);
+
+}
+
+.card:hover .face.back {
+    transform: perspective(500px) rotateY(360deg);
+}
+
+/* card back */
+
+.card .face.back>div:nth-child(1){
+    height:49%;
+    width:95%;
+    /* border:2px solid red */
+}
+.card .face.back>div:nth-child(2){
+    display:flex;
+    flex-direction: column;
+    height:49%;
+    width:95%;
+    /* border:2px solid red */
+}
+.card .face.back img{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+
+}
+.card .face.back>div>div{
+    display: flex;
+    justify-content: space-between;
+}
+.card-backside-btn{
+    border: none;
+    background-color:white;
+    color: #000000;
+    padding:5px 10px;
+    border-radius: 30px;
+    border-bottom: 5px solid rgb(11, 10, 10);
+}
+
+
+
+/* loarding animation */
+

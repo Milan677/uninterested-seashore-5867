@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="product.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <!-- loarder animation -->
+
+        <div id="header1">
+            <a id="logo" href=""><span>M</span>AYUR</a>
+            <div class="search-box">
+                <input type="text" class="searchText" placeholder="Type to Search...">
+                <a href="#" class="searchBtn">
+                    <i class="fa-solid fa-magnifying-glass fa-1.5x"></i>
+                </a>
+            </div>
+
+            <div class="nav">
+                <a href="home.html">Home <i class="fa-solid fa-house"></i></a>
+                <a href="cart.html">Cart <i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="payment.html">Address <i class="fa-solid fa-address-book"></i></a>
+                <a href="">Account <i class="fa-solid fa-user"></i></a>
+            </div>
+        </div>
+
+        <!-- <div class="nav2">
+
+        </div> -->
+        <div class="nav3">
+            <a href="">Decore</a>
+            <a href="#" onclick="living()">Living room</a>
+            <a href="#" onclick="dining()">Kitchen & Dining</a>
+            <a href="#" onclick="bedroom()">Bedroom</a>
+            <a href="#" onclick="bathroom()">Bathroom</a>
+            <a href="">Outdoor</a>
+            <h2 style="color:red">Sales & Deals</h2>
+        </div>
+
+        <div id="main">
+            <div id="left">
+                <h1>sort by</h1><br><hr>
+                <a onclick="priceHigh()" href="#">Price Hight to Low</a>
+                <a   onclick="priceLow()" href="#">Price Low to high</a>
+                <a href="">Rating High to Low</a>
+                <a href="">Rating Low to high</a>
+            </div>
+            <div id="right">
+                <!-- <div class="card">
+                    <div class="face front">
+                        <div>
+                            <img src="https://ak1.ostkcdn.com/images/products/27989464/Simple-Living-Margo-TV-Stand-1ac91683-01d8-4d0e-a9ab-6d4364a779a0_600.jpg?imwidth=480&impolicy=medium" alt="">
+                        </div><br>
+                        <div>
+                            <h4 style="color:rgb(210, 0, 0)">Sales Starts at INR <span>3500</span></h4>  
+                        </div>    
+                    </div>
+
+                    
+                    <div class="face back">
+                        <div>
+                            <img src="https://ak1.ostkcdn.com/images/products/27989464/Simple-Living-Margo-TV-Stand-1ac91683-01d8-4d0e-a9ab-6d4364a779a0_600.jpg?imwidth=480&impolicy=medium" alt="">
+                        </div>
+                        <div><br>
+                            <div>
+                                <h2>Price: <span>3500</span></h2>
+                                <h3>Flat 25% off</h3>
+                            </div><br>
+                            <h3><i style="color:orangered;" class="fa-solid fa-star"></i>
+                                <i style="color:orangered;" class="fa-solid fa-star"></i>
+                                <i style="color:orangered;" class="fa-solid fa-star"></i>
+                                <i style="color:orangered;" class="fa-solid fa-star"></i>
+                                <i style="color:orangered;" class="fa-solid fa-star-half-stroke"></i>
+                                <span>567</span>
+                            </h3>
+                            <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus necessitatibus ipsam recusandae facere? Veniam perferendis iure .
+                            </p><br>
+                            <button class="card-backside-btn">Add to cart <i class="fa-solid fa-cart-plus"></i></button>
+                          
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="card">
+                    <div class="face front">
+                        <h1>front</h1>
+                    </div>
+                    <div class="face back">
+                        <h1>back</h1>
+                    </div>
+                </div>
+                 -->
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="product.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <!-- cart page css -->
+    <link rel="stylesheet" href="cart.css">
+    <!-- <link rel="stylesheet" href="responsive.cart.css"> -->
+    <!-- font awesome icons package -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    <div id="container">
+        <!-- navbar start -->
+        <div id="header1">
+            <a id="logo" href=""><span>M</span>AYUR</a> 
+        
+            <div class="nav">
+                <a href="index.html">Home <i class="fa-solid fa-house"></i></a>
+                <a href="product.html">Product <i class="fa-solid fa-box-open"></i></a>
+                <a href="payment.html">Address <i class="fa-solid fa-address-book"></i></a>
+                <a href="#">Account <i class="fa-solid fa-user"></i></a>
+                
+            </div>
+        </div>
+       <!-- nav bar end -->
+
+       <!-- outer div -->
+       <div id="outer">
+           <div class="left">
+               <!-- <div class="card">
+                   <div class="imgBx">
+                       <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/4502c0929575891bc4c9780a2f8f1b70675e5a33/Mai-Faux-Leather-Dining-Chairs-%28Set-of-2%29.jpg?imwidth=480&impolicy=medium" alt="">
+
+                   </div>
+                   <div class="content">
+                        <h2><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i><span>500</span></h2>
+                        <h3>
+                            <i style="color:orangered;" class="fa-solid fa-star"></i>
+                                <i style="color:orangered;" class="fa-solid fa-star"></i>
+                                <i style="color:orangered;" class="fa-solid fa-star"></i>
+                                <i style="color:orangered;" class="fa-solid fa-star"></i>
+                                <i style="color:orangered;" class="fa-solid fa-star-half-stroke"></i>
+                                <span>567</span>
+                        </h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis impedit dolorem, dolore molestias nobis doloribus.</p>
+                        <h4>Living room furniture</h4>
+                        <h4><Type:span>Chair</Type:span></h4><br>
+                        <div class="dltRow">
+                            <div class="quantity">
+                                <button>+</button>
+                                <h3>1</h3>
+                                <button>-</button>
+                            </div>
+                            <div class="deleteBtn">
+                                <button class="deleteButton">Delete</button>
+                            </div>
+                        </div> 
+                   </div>
+               </div> -->
+
+               <!-- card div end -->
+               
+           </div>
+           <div class="right">
+                 <div class="heading">
+                    <h2>Cart Details <i class="fa-sharp fa-solid fa-cart-plus"></i></h2>
+                 </div>
+                <div class="total-counting">
+                    <h3>Product Amount: <i class="fa-sharp fa-solid fa-indian-rupee-sign"></i><span id="Price"></span></h3>
+                    <br>
+                    <h3>Product Quantity: <span id="quantity">5</span></h3><br>
+                    <h3>Discount: <span> 25% off</span></h3><br>
+                    <hr><br>
+                    <h3>Total Price: <i class="fa-sharp fa-solid fa-indian-rupee-sign"></i><span id="totalPrice"></span></h3>
+                    <br>
+                    <button class="checkoutBtn">Checkout</button>
+                </div>
+                <div class="product-show"></div>
+           </div>
+       </div>
+        <!-- right div end -->
+     
+
+    </div>
+
+    <script src="cart.js"></script>
+</body>
+</html>
