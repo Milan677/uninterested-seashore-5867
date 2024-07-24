@@ -1,6 +1,6 @@
 
 const showdata = () => {
-    fetch("https://rich-teal-beetle-cape.cyclic.app/furniture", {
+    fetch("https://mayur-furniture-app-backend.onrender.com/furniture", {
         headers: {
             "Content-type": "application/json",
             Authorization: localStorage.getItem("token"),
@@ -61,7 +61,7 @@ function displaydata(data) {
 
 //....fetching living room data........
 const living = () => {
-    fetch("https://rich-teal-beetle-cape.cyclic.app/furniture/living", {
+    fetch("https://mayur-furniture-app-backend.onrender.com/furniture/living", {
         headers: {
             "Content-type": "application/json",
             Authorization: localStorage.getItem("token"),
@@ -126,7 +126,7 @@ function displaylivingroomdata(data) {
 //..............fetching dining room furnitures   ............. 
 
 const dining = () => {
-    fetch("https://rich-teal-beetle-cape.cyclic.app/furniture/dining", {
+    fetch("https://mayur-furniture-app-backend.onrender.com/furniture/dining", {
         headers: {
             "Content-type": "application/json",
             Authorization: localStorage.getItem("token"),
@@ -191,7 +191,7 @@ function displaydiningdata(data) {
 
 //...........bed room furniture................
 const bedroom = () => {
-    fetch("https://rich-teal-beetle-cape.cyclic.app/furniture/bed", {
+    fetch("https://mayur-furniture-app-backend.onrender.com/furniture/bed", {
         headers: {
             "Content-type": "application/json",
             Authorization: localStorage.getItem("token"),
@@ -255,7 +255,7 @@ function displaybedroomdata(data) {
 
 //........fetching bathroom furniture........
 const bathroom = () => {
-    fetch("https://rich-teal-beetle-cape.cyclic.app/furniture/bath", {
+    fetch("https://mayur-furniture-app-backend.onrender.com/furniture/bath", {
         headers: {
             "Content-type": "application/json",
             Authorization: localStorage.getItem("token"),
@@ -337,7 +337,7 @@ const debounce = (fn, delay) => {
     let payload = {
       key: searchbox.value,
     };
-    let url = new URL("https://rich-teal-beetle-cape.cyclic.app/furniture/search");
+    let url = new URL("https://mayur-furniture-app-backend.onrender.com/furniture/search");
     url.search = new URLSearchParams(payload).toString();
     fetch(url, {
       headers: {
@@ -453,7 +453,7 @@ main.addEventListener("click", (event) => {
       quantity:"1"
     };
     
-    fetch("https://rich-teal-beetle-cape.cyclic.app/cart/create",{
+    fetch("https://mayur-furniture-app-backend.onrender.com/cart/create",{
       method:"POST",
       headers:{
         "Content-type":"application/json",
@@ -479,7 +479,7 @@ main.addEventListener("click", (event) => {
 
 //.................sort by price high to low..................
 const priceHigh=()=>{
-  fetch("https://rich-teal-beetle-cape.cyclic.app/furniture/price/high", {
+  fetch("https://mayur-furniture-app-backend.onrender.com/furniture/price/high", {
     headers: {
         "Content-type": "application/json",
         Authorization: localStorage.getItem("token"),
@@ -544,7 +544,7 @@ const priceHigh=()=>{
 
   //............s0rt by price low to high........
   const priceLow=()=>{
-    fetch("https://rich-teal-beetle-cape.cyclic.app/furniture/price/low", {
+    fetch("https://mayur-furniture-app-backend.onrender.com/furniture/price/low", {
       headers: {
           "Content-type": "application/json",
           Authorization: localStorage.getItem("token"),

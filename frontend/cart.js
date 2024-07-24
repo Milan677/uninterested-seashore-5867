@@ -1,5 +1,5 @@
 const showdata = () => {
-    fetch("https://rich-teal-beetle-cape.cyclic.app/cart", {
+    fetch("https://mayur-furniture-app-backend.onrender.com/cart", {
         headers: {
             "Content-type": "application/json",
             Authorization: localStorage.getItem("token")
@@ -68,7 +68,7 @@ main.addEventListener("click", (event) => {
       description: cardElement.querySelector(".card p").textContent,
     };
     
-    fetch("https://rich-teal-beetle-cape.cyclic.app/cart/delete",{
+    fetch("https://mayur-furniture-app-backend.onrender.com/cart/delete",{
       method:"DELETE",
       headers:{
         "Content-type":"application/json",

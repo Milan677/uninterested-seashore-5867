@@ -36,7 +36,7 @@ form1.addEventListener("submit", (e) => {
     email: s_email.value,
     pass: s_pass.value
   }
-  fetch("https://rich-teal-beetle-cape.cyclic.app/user/register", {
+  fetch("https://mayur-furniture-app-backend.onrender.com/user/register", {
     method: "POST",
     headers: {
       "Content-type": "application/json"
@@ -83,7 +83,7 @@ form2.addEventListener("submit", (e) => {
     email: l_email.value,
     pass: l_pass.value
   }
-  fetch("https://rich-teal-beetle-cape.cyclic.app/user/login", {
+  fetch("https://mayur-furniture-app-backend.onrender.com/user/login", {
     method: "POST",
     headers: {
       "Content-type": "application/json"
